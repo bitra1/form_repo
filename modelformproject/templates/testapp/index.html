@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to FeedBack Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  </head>
+  <body>
+    <h1> Welocome to  Feedback Form </h1>
+    <div class="container" align="center">
+      <form  method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="Submit" class='btn btn-success' name="" value="submit">
+      </form>
+
+    </div>
+
+  </body>
+</html>
